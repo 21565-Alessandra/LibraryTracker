@@ -1,11 +1,27 @@
 package com.reis;
 
-public class BookTitles {
+public class BookTitles extends Genre {
 
     int bookId;
     String author;
     String title;
     int edition;
+
+
+    public BookTitles(int bookId, String author, String title, int edition, String genre, String subGenre, String targetAudience) {
+        super(genre, subGenre, targetAudience);
+        this.bookId = bookId;
+        this.author = author;
+        this.title = title;
+        this.edition = edition;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Book ID: " + this.bookId + " Author: " + this.author + " Title: " + " Edition: " + this.edition + super.toString();
+
+    }
 
     public double getBookId() {return bookId;}
 
@@ -22,10 +38,6 @@ public class BookTitles {
     public void setTitle(String title) { this.title = title; }
 
     public void setEdition(int bookEdition) { this.edition = bookEdition; }
-
-    public BookTitles(int bookId, String author, String title, int bookEdition) {
-
-    }
 
     public void bookDetails(){
         System.out.println("Book ID: " + this.getBookId());
@@ -46,8 +58,12 @@ public class BookTitles {
     }
      */
 
-    public BookTitles() {}
+    @Override
+    public void genreClassification() {
 
+        System.out.println("Genre Classification Details: " + super.toString());
+
+    }
 }
 
 

@@ -4,7 +4,7 @@ public class Driver {
 
     public static void run() {
 
-        BookTitles book1 = new BookTitles(101, "ADICHIE, Chimamanda", "Americanah", 2019);
+        BookTitles book1 = new BookTitles(101, "ADICHIE, Chimamanda", "Americanah", 2019, "Novel", "Novel", "NA");
         book1.bookDetails();
         System.out.println(book1);
 

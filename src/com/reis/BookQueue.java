@@ -19,13 +19,13 @@ public class BookQueue {
         int removeBook = myQueue.remove();
 
         System.out.println("Book withdrawn from the library: " + removeBook);
-        System.out.println("Books of the queue " + myQueue);
+        System.out.println("Books available by ID: " + myQueue);
 
         int head = myQueue.peek();
         System.out.println("Head of Queue: " + head);
 
         int size = myQueue.size();
-        System.out.println("Books available: " + size);
+        System.out.println("Total of books available: " + size);
 
     }
 }

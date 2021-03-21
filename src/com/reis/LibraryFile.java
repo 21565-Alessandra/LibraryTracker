@@ -1,52 +1,19 @@
 package com.reis;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Formatter;
+public interface LibraryFile {
 
-public class LibraryFile extends BookTitles implements File {
+    void addBookTitles(int bookId, String author, String title, int edition, String genre, String subGenre, String targetAudience);
 
-    private int clientId;
-    public String clientName;
-    ArrayList<BookTitles> libraryFile = new ArrayList<BookTitles>();
+    void createTextFile(String fileId, int bookId, String author, String title, int edition, String genre, String subGenre, String targetAudience);
 
-    public int getClientId() { return clientId; }
+    void readFile(String fileId);
 
-    public String getClientName() { return clientName; }
+    void openFile();
 
-    public void setClientId() { this.clientId = clientId; }
+    void closeFile();
 
-    public void setClientName() { this.clientName = clientName; }
-
-    public void addBookTitles() {
-        int bookId, edition;
-        String author, title;
-
-        BookTitles bookTitles = new BookTitles();
-    }
-
-    //constructor
-    public LibraryFile(int clientId, String clientName) {
-        this.clientId = clientId;
-        this.clientName = clientName;
-            }
-
-    //method
-    public void bookDetails(){
-
-        for(BookTitles bookTitles: libraryFile)
-            System.out.println("Book ID: " + bookTitles.getBookId() +
-                    ". Book author: " + bookTitles.getAuthor() +
-                    ". Book title: " + bookTitles.getTitle() +
-                    ". Edition: " + bookTitles.getEdition());
-
-    }
-
-
-
-    public void createTextFile(String bookTracker) {
-
-    }
 }
 
-//array lista com os livros
+
+
+
