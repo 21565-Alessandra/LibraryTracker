@@ -1,6 +1,8 @@
+// STUDENT NAME: ALESSANDRA SILVA DOS REIS // STUDENT ID: 21565
+
 package com.reis;
 
-//Abstract class
+//Abstract class with the genre details of the books
 public abstract class Genre {
 
     private String genre;
@@ -15,6 +17,7 @@ public abstract class Genre {
 
     protected abstract void genreClassification();
 
+    //Overriding toString method of a super class
     @Override
     public String toString(){
 

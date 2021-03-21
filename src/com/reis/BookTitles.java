@@ -1,13 +1,20 @@
+// STUDENT NAME: ALESSANDRA SILVA DOS REIS // STUDENT ID: 21565
+
 package com.reis;
+
+import java.util.ArrayList;
+
 
 public class BookTitles extends Genre {
 
+    //atributes
     int bookId;
     String author;
     String title;
     int edition;
+    ArrayList<BookTitles> bookList = new ArrayList<BookTitles>();
 
-
+    //constructor
     public BookTitles(int bookId, String author, String title, int edition, String genre, String subGenre, String targetAudience) {
         super(genre, subGenre, targetAudience);
         this.bookId = bookId;
@@ -16,10 +23,11 @@ public class BookTitles extends Genre {
         this.edition = edition;
     }
 
+    //Overriding the super class method from genre abstract class
     @Override
     public String toString() {
 
-        return "Book ID: " + this.bookId + " Author: " + this.author + " Title: " + " Edition: " + this.edition + super.toString();
+        return super.toString();
 
     }
 
@@ -39,27 +47,21 @@ public class BookTitles extends Genre {
 
     public void setEdition(int bookEdition) { this.edition = bookEdition; }
 
+    //method to use the Array List
     public void bookDetails(){
+        for(BookTitles bookTitles: bookList)
+
+        System.out.println(" ");
         System.out.println("Book ID: " + this.getBookId());
-        System.out.println("Book author: " + this.author);
-        System.out.println("Book title: " + this.title);
-        System.out.println("Edition: " + this.edition);
+        System.out.println("Book author: " + this.getAuthor());
+        System.out.println("Book title: " + this.getTitle());
+        System.out.println("Edition: " + this.getEdition());
+        System.out.println("============================");
     }
 
-    /*
-    public void bookDetails(){
-
-        for(BookTitles bookTitles: libraryFile)
-            System.out.println("Book ID: " + bookTitles.getBookId() +
-                    ". Book author: " + bookTitles.getAuthor() +
-                    ". Book title: " + bookTitles.getTitle() +
-                    ". Edition: " + bookTitles.getEdition());
-
-    }
-     */
-
+    //protected function
     @Override
-    public void genreClassification() {
+    protected void genreClassification() {
 
         System.out.println("Genre Classification Details: " + super.toString());
 
